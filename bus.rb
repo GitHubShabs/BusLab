@@ -26,4 +26,8 @@ attr_reader :number, :destination,:passengers
         @passengers.delete(passenger)
   end
 
+  def empty_bus
+    @passengers = []
+  end
+
 end

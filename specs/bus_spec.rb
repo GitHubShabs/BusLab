@@ -48,5 +48,14 @@ class BusTest < MiniTest::Test
     assert_equal(0, bus1.passenger_count)
   end
 
+  def test_empty_bus
+    passenger1 = Passenger.new("Rick", 38)
+    passenger2 = Passenger.new("Shabs", 21)
+    passenger3 = Passenger.new("Jonathan", 5)
+    bus1 = Bus.new(11, "Princes Street", [passenger1, passenger2, passenger3])
+    bus1.empty_bus
+    assert_equal(0, bus1.passenger_count)
+  end
+
 
 end
