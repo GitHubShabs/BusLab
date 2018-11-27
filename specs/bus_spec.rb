@@ -41,5 +41,12 @@ class BusTest < MiniTest::Test
     assert_equal(1, bus1.passenger_count)
   end
 
+  def test_drop_off
+    passenger = Passenger.new("Rick", 38)
+    bus1 = Bus.new(11, "Princes Street", [passenger])
+    bus1.drop_off(passenger)
+    assert_equal(0, bus1.passenger_count)
+  end
+
 
 end

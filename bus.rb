@@ -22,5 +22,8 @@ attr_reader :number, :destination,:passengers
     @passengers << passenger
   end
 
+  def drop_off(passenger)
+        @passengers.delete(passenger)
+  end
 
 end
