@@ -26,7 +26,12 @@ end
 def test_bus_start_empty
   bus1 = Bus.new(22, "Silverknowles", [])
   assert_equal([], bus1.passengers)
-end 
+end
+
+def test_count_passengers
+  bus1 = Bus.new(11, "Princes Street", ["Rick", "Shabs", "John"])
+  assert_equal(bus1.passenger_count, 3)
+end
 
 
 end
