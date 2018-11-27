@@ -18,5 +18,9 @@ attr_reader :number, :destination,:passengers
     return @passengers.count
   end
 
+  def pick_up(passenger)
+    @passengers << passenger
+  end
+
 
 end
