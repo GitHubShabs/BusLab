@@ -7,4 +7,8 @@ attr_reader :name, :queue
     @queue = queue
   end
 
+  def add_to_queue(passenger)
+    @queue << passenger
+  end
+
 end
